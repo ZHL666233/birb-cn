@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./assets/popcorn-DgmII2A0.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Birb</title>
+    <script>
+        // 汉化辅助：让 Canvas 内文字在中文字符时回退到系统中文字体（英文仍用像素字体）
+        (function () {
+            var ZH = "'Microsoft YaHei','PingFang SC','Noto Sans SC','WenQuanYi Micro Hei',sans-serif";
+            try {
+                var proto = CanvasRenderingContext2D.prototype;
+                var desc = Object.getOwnPropertyDescriptor(proto, 'font');
+                if (desc && desc.set) {
+                    Object.defineProperty(proto, 'font', {
+                        configurable: true,
+                        get: desc.get,
+                        set: function (v) {
+                            if (typeof v === 'string' && /Tiny5|PixelOperator/.test(v) && !/YaHei|PingFang|Noto Sans|WenQuanYi/.test(v)) {
+                                v = v.replace(/(Tiny5|PixelOperator[A-Za-z ]*|PixelOperatorMono)/, '$&,' + ZH);
+                            }
+                            desc.set.call(this, v);
+                        }
+                    });
+                }
+            } catch (e) { }
+        })();
+    </script>
+    <script src="./itch-frame-ready.js"></script>
+  <script type="module" crossorigin src="./assets/main-7_LUcYxX.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-DdH9JgaZ.js">
+  <link rel="modulepreload" crossorigin href="./assets/maps-BILFrqKW.js">
+  <link rel="modulepreload" crossorigin href="./assets/vendor-Bjkrs06Y.js">
+  <link rel="modulepreload" crossorigin href="./assets/audio-DQ28Xj1A.js">
+  <link rel="stylesheet" crossorigin href="./assets/main-DA_7hnFA.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="game-area">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        <div id="ui-panel">
+            <div id="ui-panel-scale">
+                <div id="tab-content"></div>
+            </div>
+        </div>
+    </div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5ebf8334504a4422b678d47ffc658277","r":1}' crossorigin="anonymous"></script>
+</body>
+
+</html>

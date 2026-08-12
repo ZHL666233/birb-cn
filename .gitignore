@@ -1,0 +1,12 @@
+# 工具目录
+.reasonix/
+
+# 中间产物（可从 patch_main.py + 原始 main JS 重新生成）
+patched_main.js
+
+# 本地测试服务器（GitHub Pages 用不到）
+birbplay/server.js
+
+# 系统文件
+.DS_Store
+Thumbs.db

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; frame-src blob: https://birbplay.com https://www.birbplay.com http://localhost:* http://127.0.0.1:*; connect-src https://itch.io https://*.itch.io; script-src 'unsafe-inline' https://static.itch.io; style-src 'unsafe-inline'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'" />
+    <title>Birb</title>
+    <style>
+        @font-face {
+            font-family: "Tiny5";
+            src: url("./Tiny5-Regular.ttf") format("truetype");
+            font-display: swap;
+        }
+        :root {
+            color-scheme: dark;
+            font-family: "Tiny5", monospace;
+        }
+        * { box-sizing: border-box; }
+        html, body, #app, #game-frame { width: 100%; height: 100%; margin: 0; }
+        body { overflow: hidden; background: #5e9d58; color: #fff; }
+        #game-frame { display: block; border: 0; background: #5e9d58; }
+        #fallback {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            padding: 16px;
+            background-color: #5e9d58;
+            background-image: url("./meadow.png");
+            background-repeat: repeat;
+            image-rendering: pixelated;
+        }
+        #fallback[hidden] { display: none; }
+        .panel {
+            width: min(500px, calc(100vw - 48px));
+            max-height: calc(100dvh - 64px);
+            overflow-y: auto;
+            border: 4px solid #fff;
+            border-radius: 8px;
+            background: #202020;
+            padding: 32px 48px;
+            box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: panel-in 0.35s ease-out both;
+        }
+        .title-img {
+            display: block;
+            width: min(360px, 90%);
+            height: auto;
+            margin: 0 auto 18px;
+            image-rendering: pixelated;
+        }
+        h1 {
+            margin: 0 0 14px;
+            color: #fff;
+            font-size: clamp(25px, 5vw, 34px);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            text-shadow: 2px 2px 0 #000;
+        }
+        p {
+            margin: 0 auto 18px;
+            max-width: 390px;
+            color: #aaa;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .save-found { color: #fff; }
+        .actions { display: grid; gap: 10px; margin-top: 22px; }
+        button {
+            min-height: 58px;
+            border: 3px solid #fff;
+            border-bottom: 6px solid #27ae60;
+            border-radius: 4px;
+            padding: 14px 16px 15px;
+            background: #2ecc71;
+            color: #fff;
+            font: 700 20px "Tiny5", monospace;
+            cursor: pointer;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
+            transition: background-color 0.15s ease;
+        }
+        button:hover,
+        button:focus-visible { background: #3bd47c; }
+        button:active {
+            transform: translateY(3px);
+            border-bottom-width: 3px;
+            padding-bottom: 18px;
+        }
+        button.secondary {
+            min-height: 46px;
+            border-bottom-color: #1d3557;
+            background: #457b9d;
+            font-size: 15px;
+        }
+        button.secondary:hover,
+        button.secondary:focus-visible { background: #568dad; }
+        button:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px #f4a261;
+        }
+        #status {
+            min-height: 18px;
+            margin-top: 14px;
+            color: #94d2bd;
+            font-size: 13px;
+            line-height: 1.35;
+        }
+        #status:empty { display: none; }
+        @keyframes panel-in {
+            from { opacity: 0; transform: translateY(28px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 560px) {
+            .panel {
+                width: min(500px, calc(100vw - 20px));
+                max-height: calc(100dvh - 24px);
+                padding: 22px 16px 24px;
+                border-width: 3px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+            }
+            .title-img { width: min(280px, 86%); margin-bottom: 14px; }
+            h1 { font-size: 27px; }
+            p { font-size: 15px; }
+            button { min-height: 52px; font-size: 18px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .panel { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <section id="fallback" hidden>
+        <div class="panel">
+            <img class="title-img" src="./title.png" alt="Birb" />
+            <h1>CONTINUE ON BIRBPLAY</h1>
+            <p id="fallback-copy">Your browser blocks the cookies needed to play inside itch. Open BirbPlay in a new tab to continue safely.</p>
+            <p id="save-copy" class="save-found" hidden>Your old guest save was found and will be offered for migration.</p>
+            <div class="actions">
+                <button id="open-birbplay" type="button">OPEN BIRBPLAY.COM</button>
+                <button id="download-save" class="secondary" type="button" hidden>DOWNLOAD OLD SAVE BACKUP</button>
+            </div>
+            <div id="status" aria-live="polite"></div>
+        </div>
+    </section>
+    <script>
+        (() => {
+            'use strict';
+
+            const PROTOCOL_VERSION = 1;
+            const SAVE_KEY = 'birb_save';
+            const MIGRATED_KEY = 'birb_save_migrated_to_birbplay';
+            const DECLINED_KEY = 'birb_save_migration_declined';
+            const MAX_SAVE_LENGTH = 2 * 1024 * 1024;
+            const productionUrl = 'https://birbplay.com/';
+            const query = new URLSearchParams(window.location.search);
+            const isLocalWrapper = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname);
+            const isItchApp = window.location.protocol === 'itch-cave:' ||
+                (isLocalWrapper && query.get('fixture') === 'itch-app');
+            const requestedTarget = isLocalWrapper ? query.get('target') : null;
+            const targetUrl = new URL(requestedTarget || productionUrl);
+            targetUrl.searchParams.set('source', 'itch');
+            const targetOrigin = targetUrl.origin;
+
+            const app = document.getElementById('app');
+            const fallback = document.getElementById('fallback');
+            const fallbackCopy = document.getElementById('fallback-copy');
+            const saveCopy = document.getElementById('save-copy');
+            const openButton = document.getElementById('open-birbplay');
+            const downloadButton = document.getElementById('download-save');
+            const status = document.getElementById('status');
+
+            let frame = null;
+            let frameReadyTimeout = null;
+            let popup = null;
+            let legacySave = null;
+            let saveFingerprint = null;
+            let migrationPending = false;
+            let frameNonce = null;
+            let popupNonce = null;
+
+            try {
+                const candidate = window.localStorage.getItem(SAVE_KEY);
+                const candidateBytes = candidate ? new TextEncoder().encode(candidate).byteLength : 0;
+                if (candidate && candidateBytes <= MAX_SAVE_LENGTH) legacySave = candidate;
+                if (candidate && candidateBytes > MAX_SAVE_LENGTH) {
+                    downloadButton.hidden = false;
+                    fallbackCopy.textContent = 'Your old save is larger than the automatic migration limit. Download a backup before continuing.';
+                }
+            } catch {
+                legacySave = null;
+            }
+            if (isLocalWrapper && query.get('fixture') === 'empty-save') legacySave = '{}';
+
+            async function fingerprint(value) {
+                if (!value) return null;
+                const bytes = new TextEncoder().encode(value);
+                const digest = await crypto.subtle.digest('SHA-256', bytes);
+                return Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
+            }
+
+            function showFallback(message) {
+                if (frameReadyTimeout) {
+                    window.clearTimeout(frameReadyTimeout);
+                    frameReadyTimeout = null;
+                }
+                if (frame) {
+                    frame.remove();
+                    frame = null;
+                }
+                if (message) fallbackCopy.textContent = message;
+                saveCopy.hidden = !migrationPending;
+                fallback.hidden = false;
+                openButton.focus();
+            }
+
+            function createFrame() {
+                frame = document.createElement('iframe');
+                frame.id = 'game-frame';
+                frame.title = 'Birb';
+                frame.src = targetUrl.toString();
+                frame.referrerPolicy = 'strict-origin-when-cross-origin';
+                frame.allow = 'autoplay; fullscreen; gamepad; clipboard-write';
+                frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-downloads allow-popups allow-pointer-lock allow-modals');
+                app.appendChild(frame);
+                frameReadyTimeout = window.setTimeout(() => {
+                    frameReadyTimeout = null;
+                    // itch-cave uses an opaque origin on some Linux/Wine setups.
+                    // If there is no legacy save to transfer, a missing migration
+                    // handshake must not destroy an otherwise working game frame.
+                    if (isItchApp && !migrationPending) return;
+                    showFallback('BirbPlay could not load inside itch. Open it in a new tab to continue safely.');
+                }, 20000);
+            }
+
+            function sendLegacySave(target, nonce) {
+                if (!migrationPending || !legacySave || !target) return;
+                target.postMessage({
+                    nonce,
+                    payload: legacySave,
+                    type: 'birb:legacy-save',
+                    version: PROTOCOL_VERSION,
+                }, targetOrigin);
+            }
+
+            window.addEventListener('message', (event) => {
+                if (event.origin !== targetOrigin || !event.data || event.data.version !== PROTOCOL_VERSION) return;
+                const isFrame = frame && event.source === frame.contentWindow;
+                const isPopup = popup && event.source === popup;
+                if (!isFrame && !isPopup) return;
+
+                if (event.data.type === 'birb:frame-ready' && isFrame) {
+                    if (frameReadyTimeout) {
+                        window.clearTimeout(frameReadyTimeout);
+                        frameReadyTimeout = null;
+                    }
+                    return;
+                }
+                if (event.data.type === 'birb:migration-ready' && typeof event.data.nonce === 'string') {
+                    if (frameReadyTimeout) {
+                        window.clearTimeout(frameReadyTimeout);
+                        frameReadyTimeout = null;
+                    }
+                    if (isFrame) frameNonce = event.data.nonce;
+                    if (isPopup) popupNonce = event.data.nonce;
+                    sendLegacySave(event.source, event.data.nonce);
+                    return;
+                }
+                if (event.data.type === 'birb:third-party-cookies-blocked' && isFrame) {
+                    // Account authentication can be unavailable in hardened browsers,
+                    // VPNs and corporate networks while the local game remains fully
+                    // playable. Never remove a running game just because cloud
+                    // features could not establish a cookie-backed session.
+                    return;
+                }
+                const expectedNonce = isFrame ? frameNonce : popupNonce;
+                if (typeof expectedNonce !== 'string' || event.data.nonce !== expectedNonce) return;
+                if (event.data.type === 'birb:migration-complete') {
+                    try {
+                        if (saveFingerprint) window.localStorage.setItem(MIGRATED_KEY, saveFingerprint);
+                        window.localStorage.removeItem(DECLINED_KEY);
+                    } catch { /* The original save remains available even if the marker cannot be stored. */ }
+                    migrationPending = false;
+                    status.textContent = 'Old save migrated successfully.';
+                    return;
+                }
+                if (event.data.type === 'birb:migration-declined') {
+                    try {
+                        if (saveFingerprint) window.localStorage.setItem(DECLINED_KEY, saveFingerprint);
+                    } catch { /* Keep offering the untouched save when storage is unavailable. */ }
+                    migrationPending = false;
+                    return;
+                }
+                if (event.data.type === 'birb:migration-failed') {
+                    migrationPending = true;
+                    status.textContent = event.data.reason === 'remote-sync-failed'
+                        ? 'The save is local, but account sync was not confirmed. Retry in BirbPlay.'
+                        : 'The migration was not completed. Your original itch save is unchanged.';
+                    return;
+                }
+            });
+
+            openButton.addEventListener('click', () => {
+                popup = window.open(targetUrl.toString(), 'birbplay');
+                if (!popup) {
+                    status.textContent = 'Pop-up blocked. Allow pop-ups for itch and try again.';
+                    return;
+                }
+                status.textContent = migrationPending
+                    ? 'BirbPlay opened. Keep this itch tab open while the save is transferred.'
+                    : 'BirbPlay opened in a new tab.';
+            });
+
+            downloadButton.addEventListener('click', () => {
+                let content = null;
+                try { content = window.localStorage.getItem(SAVE_KEY); } catch { content = null; }
+                if (!content) return;
+                const url = URL.createObjectURL(new Blob([content], { type: 'application/octet-stream' }));
+                const anchor = document.createElement('a');
+                anchor.href = url;
+                anchor.download = `birb_save_itch_backup_${Date.now()}.birb`;
+                anchor.style.display = 'none';
+                document.body.appendChild(anchor);
+                anchor.click();
+                anchor.remove();
+                window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+            });
+
+            void (async () => {
+                saveFingerprint = await fingerprint(legacySave);
+                let migrated = null;
+                let declined = null;
+                try {
+                    migrated = window.localStorage.getItem(MIGRATED_KEY);
+                    declined = window.localStorage.getItem(DECLINED_KEY);
+                } catch { /* Storage can be unavailable in hardened browsers. */ }
+                migrationPending = !!legacySave && saveFingerprint !== migrated && saveFingerprint !== declined;
+
+                // Authentication cookies are optional in the embedded client. The
+                // game remains fully playable from its local save when the browser
+                // blocks third-party cookies.
+                createFrame();
+            })();
+        })();
+    </script>
+</body>
+</html>
+<script defer src="https://static.itch.io/htmlgame.js" type="text/javascript"></script>
