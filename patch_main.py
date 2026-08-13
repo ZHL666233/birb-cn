@@ -70,5 +70,17 @@ js = rep(js,
     "<button\\x20id=\\x22tab-multi\\x22\\x20class=\\x22tab-btn\\x22\\x20style=\\x22display:none\\x22>",
     1, 'P7 hide multiplayer tab')
 
+# P8: force chat disabled (WR() always takes the hide-chat branch)
+js = rep(js,
+    "_0x51be10=!!_0x2eeb7b['state']['settings']?.['disableChat']",
+    "_0x51be10=!0x0",
+    1, 'P8 force disable chat')
+
+# P9: hide the chat toggle button in settings
+js = rep(js,
+    "<button\\x20id=\\x22settings-game-chat-btn\\x22\\x20class=\\x22birb-btn\\x20primary\\x22\\x20style=\\x22width:100%;\\x20padding:12px;\\x20font-size:14px;\\x22>",
+    "<button\\x20id=\\x22settings-game-chat-btn\\x22\\x20class=\\x22birb-btn\\x20primary\\x22\\x20style=\\x22display:none;\\x20width:100%;\\x20padding:12px;\\x20font-size:14px;\\x22>",
+    1, 'P9 hide chat toggle button')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
