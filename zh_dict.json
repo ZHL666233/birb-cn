@@ -2692,7 +2692,7 @@
    "description": "+5% 钓鱼经验"
   },
   "fish_yellow_tan": {
-   "name": "黄棕黄鱼",
+   "name": "黄褐鱼",
    "description": "+5% 种子"
   },
   "fish_bright_green": {
@@ -2708,7 +2708,7 @@
    "description": "+12% 爆米花"
   },
   "fish_brown_tan": {
-   "name": "棕棕黄鱼",
+   "name": "棕褐鱼",
    "description": "+6% 收线速度"
   },
   "fish_green_olive": {
@@ -2752,7 +2752,7 @@
    "description": "+35% 爆米花"
   },
   "perch_green_spotted": {
-   "name": "斑鲈鱼",
+   "name": "斑纹鲈鱼",
    "description": "+35% 钓鱼经验"
   },
   "perch_lavender": {
@@ -2768,7 +2768,7 @@
    "description": "+30% 羽毛"
   },
   "perch_moss_green": {
-   "name": "苔鲈鱼",
+   "name": "苔藓鲈鱼",
    "description": "+18% 爆米花"
   },
   "perch_neon_green": {
@@ -2856,7 +2856,7 @@
    "description": "+75% 羽毛"
   },
   "loach": {
-   "name": "石头泥鳅",
+   "name": "石泥鳅",
    "description": "+7% 种子"
   },
   "minnow_eur": {
@@ -2916,7 +2916,7 @@
    "description": "+38% 种子"
   },
   "eel_moray": {
-   "name": "海鳝鳗鱼",
+   "name": "海鳝",
    "description": "+50% 羽毛"
   },
   "lionfish_green": {
@@ -2928,11 +2928,11 @@
    "description": "+80% 爆米花"
   },
   "ghost_whale_purple": {
-   "name": "光谱鲸",
+   "name": "幽灵鲸",
    "description": "+80% 钓鱼经验"
   },
   "ghost_shark_blue": {
-   "name": "幽灵鲨鱼",
+   "name": "幽灵鲨",
    "description": "+80% 种子"
   },
   "ghost_angel_purple": {
@@ -2940,15 +2940,15 @@
    "description": "+80% 钓鱼经验"
   },
   "ghost_blob_pink": {
-   "name": "粉灵魂水滴",
+   "name": "粉灵魂软泥",
    "description": "+40% 爆米花"
   },
   "ghost_eel_skeleton": {
-   "name": "骷髅鳗鱼",
+   "name": "骨鳗",
    "description": "+65% 移动速度"
   },
   "ghost_eye_purple": {
-   "name": "守望者灵魂",
+   "name": "守望之灵",
    "description": "+90% 半径"
   },
   "ghost_octopus_pink": {
@@ -2972,15 +2972,15 @@
    "description": "+15% 爆米花"
   },
   "ocean_cyan": {
-   "name": "亮青色鱼",
+   "name": "亮青鱼",
    "description": "+25% 钓鱼经验"
   },
   "ocean_purple_striped": {
-   "name": "纹紫鱼",
+   "name": "紫纹鱼",
    "description": "+45% 种子"
   },
   "ocean_teal_white": {
-   "name": "青绿-白鱼",
+   "name": "青白鱼",
    "description": "+25% 半径"
   },
   "jellyfish_blue": {
@@ -3016,7 +3016,7 @@
    "description": "+5% 移动速度"
   },
   "blue_moonfish": {
-   "name": "蓝月亮鱼",
+   "name": "蓝月鱼",
    "description": "+40% 钓鱼经验"
   },
   "blue_prawn": {
@@ -3116,7 +3116,7 @@
    "description": "+18% 半径"
   },
   "fish_robot": {
-   "name": "机械-鱼",
+   "name": "机械鱼",
    "description": "+25% 移动速度"
   },
   "octobot": {
@@ -3124,7 +3124,7 @@
    "description": "+45% 种子"
   },
   "turtle_mech": {
-   "name": "铁龟",
+   "name": "铁甲龟",
    "description": "+20% 爆米花"
   },
   "mech_fish_gold": {
@@ -3136,7 +3136,7 @@
    "description": "+60% 爆米花"
   },
   "sub_whale": {
-   "name": "鲸运输",
+   "name": "运输鲸",
    "description": "+60% 种子"
   },
   "cosmic_seraph_purple": {
@@ -3156,7 +3156,7 @@
    "description": "+25% 半径"
   },
   "cosmic_crescent": {
-   "name": "月新月",
+   "name": "月牙",
    "description": "+50% 种子"
   },
   "cosmic_jellyfish": {
@@ -3164,7 +3164,7 @@
    "description": "+55% 钓鱼经验"
   },
   "cosmic_wraith": {
-   "name": "星怨灵",
+   "name": "星之怨灵",
    "description": "+60% 羽毛"
   },
   "flying_fish_cosmic": {
@@ -3176,7 +3176,7 @@
    "description": "+50% 收线速度"
   },
   "viperfish_black": {
-   "name": "深毒蛇鱼",
+   "name": "深海毒蛇鱼",
    "description": "+30% 羽毛"
   },
   "abyssal_eel_orange": {
@@ -3188,7 +3188,7 @@
    "description": "+40% 种子"
   },
   "blobfish_deep": {
-   "name": "深渊水滴",
+   "name": "深渊软泥",
    "description": "+20% 半径"
   },
   "gulper_eel": {
@@ -3216,11 +3216,11 @@
    "description": "+10% 钓鱼经验"
   },
   "veiltail_cyan": {
-   "name": "青色纱尾鱼",
+   "name": "青纱尾鱼",
    "description": "+35% 收线速度"
   },
   "fish_blue_standard": {
-   "name": "标准蓝鱼",
+   "name": "蓝鱼",
    "description": "+5% 收线速度"
   },
   "fish_brown_dark": {
@@ -3228,7 +3228,7 @@
    "description": "+5% 爆米花"
   },
   "fish_brown_standard": {
-   "name": "标准棕鱼",
+   "name": "棕鱼",
    "description": "+5% 钓鱼经验"
   },
   "fish_dark_grey": {
@@ -3236,19 +3236,19 @@
    "description": "+15% 种子"
   },
   "fish_grey_standard": {
-   "name": "标准灰鱼",
+   "name": "灰鱼",
    "description": "+5% 半径"
   },
   "fish_lavender_standard": {
-   "name": "标准薰衣草鱼",
+   "name": "薰衣草鱼",
    "description": "+15% 钓鱼经验"
   },
   "fish_olive_tan": {
-   "name": "橄榄棕黄鱼",
+   "name": "橄榄褐鱼",
    "description": "+12% 收线速度"
   },
   "fish_orange_round": {
-   "name": "圆橙鱼",
+   "name": "橙圆鱼",
    "description": "+15% 钓鱼经验"
   },
   "fish_silver_blue": {
@@ -3256,7 +3256,7 @@
    "description": "+15% 种子"
   },
   "fish_tan_gold": {
-   "name": "棕黄金鱼",
+   "name": "棕金鱼",
    "description": "+18% 爆米花"
   },
   "fish_white_fresh": {
@@ -3284,7 +3284,7 @@
    "description": "+40% 种子"
   },
   "catfish_tan_river": {
-   "name": "河棕黄鲶鱼",
+   "name": "河褐鲶鱼",
    "description": "+12% 收线速度"
   },
   "discus_red": {
@@ -3328,7 +3328,7 @@
    "description": "+15% 爆米花"
   },
   "sunfish_tan_river": {
-   "name": "河棕黄太阳鱼",
+   "name": "河褐太阳鱼",
    "description": "+15% 钓鱼经验"
   },
   "sunfish_white_river": {
@@ -3396,7 +3396,7 @@
    "description": "+10% 收线速度"
   },
   "whale_blue_green_ocean": {
-   "name": "泛绿蓝鲸",
+   "name": "绿蓝鲸",
    "description": "+200% 爆米花"
   },
   "whale_blue_small_ocean": {
@@ -3404,7 +3404,7 @@
    "description": "+40% 钓鱼经验"
   },
   "whale_dark_teal_ocean": {
-   "name": "深青绿鲸",
+   "name": "深青鲸",
    "description": "+45% 种子"
   },
   "whale_magenta_ocean": {
@@ -3428,19 +3428,19 @@
    "description": "+15% 钓鱼经验"
   },
   "normal_oyster": {
-   "name": "标准牡蛎",
+   "name": "牡蛎",
    "description": "+8% 种子"
   },
   "prawn_creature": {
-   "name": "标准虾",
+   "name": "虾",
    "description": "+5% 爆米花"
   },
   "puffer_fish_standard": {
-   "name": "标准河豚",
+   "name": "河豚",
    "description": "+20% 羽毛"
   },
   "runic_moonfish": {
-   "name": "符文月亮鱼",
+   "name": "符文月鱼",
    "description": "+50% 种子"
   },
   "small_crab_creature": {
@@ -3448,11 +3448,11 @@
    "description": "+6% 收线速度"
   },
   "angelfish_blue_yellow": {
-   "name": "蓝-黄神仙鱼",
+   "name": "蓝黄神仙鱼",
    "description": "+40% 半径"
   },
   "angelfish_yellow_purple": {
-   "name": "黄-紫神仙鱼",
+   "name": "黄紫神仙鱼",
    "description": "+45% 钓鱼经验"
   },
   "cichlid_brown": {
@@ -3480,7 +3480,7 @@
    "description": "+30% 爆米花"
   },
   "goldfish_red_reef": {
-   "name": "礁红金鱼",
+   "name": "红礁金鱼",
    "description": "+25% 羽毛"
   },
   "gramma_royal": {
@@ -3496,11 +3496,11 @@
    "description": "+40% 收线速度"
   },
   "triggerfish_green": {
-   "name": "绿扳机鱼",
+   "name": "绿鳞鲀",
    "description": "+38% 爆米花"
   },
   "triggerfish_red": {
-   "name": "红扳机鱼",
+   "name": "红鳞鲀",
    "description": "+40% 钓鱼经验"
   },
   "wrasse_blue_yellow": {
@@ -3516,23 +3516,23 @@
    "description": "+85% 钓鱼经验"
   },
   "ghost_blob_blue": {
-   "name": "蓝灵魂水滴",
+   "name": "蓝灵魂软泥",
    "description": "+60% 爆米花"
   },
   "ghost_blob_white": {
-   "name": "白灵魂水滴",
+   "name": "白灵魂软泥",
    "description": "+65% 收线速度"
   },
   "ghost_blob_yellow": {
-   "name": "黄灵魂水滴",
+   "name": "黄灵魂软泥",
    "description": "+60% 种子"
   },
   "ghost_fish_gold": {
-   "name": "金幽灵",
+   "name": "金灵",
    "description": "+125% 羽毛"
   },
   "ghost_fish_gold_skeleton": {
-   "name": "骷髅金鱼",
+   "name": "骨金鱼",
    "description": "+55% 爆米花"
   },
   "ghost_fish_green_round": {
@@ -3556,11 +3556,11 @@
    "description": "+20% 钓鱼经验"
   },
   "ghost_orb_white": {
-   "name": "光谱光球",
+   "name": "幽灵光球",
    "description": "+40% 爆米花"
   },
   "ghost_shark_pink": {
-   "name": "粉幽灵鲨鱼",
+   "name": "粉幽灵鲨",
    "description": "+85% 羽毛"
   },
   "ghost_skeleton_green_long": {
@@ -3636,7 +3636,7 @@
    "description": "+20% 爆米花"
   },
   "star_spirit_pink": {
-   "name": "粉星灵魂",
+   "name": "粉星灵",
    "description": "+70% 钓鱼经验"
   },
   "anchor_hook": {
@@ -3656,19 +3656,19 @@
    "description": "+30% 收线速度"
   },
   "drill_missile": {
-   "name": "潜艇-钻",
+   "name": "钻潜艇",
    "description": "+55% 种子"
   },
   "fish_mech_copper": {
-   "name": "铜机械-鱼",
+   "name": "铜机械鱼",
    "description": "+25% 收线速度"
   },
   "fish_mech_iron": {
-   "name": "铁机械-鱼",
+   "name": "铁机械鱼",
    "description": "+15% 爆米花"
   },
   "fish_mech_round": {
-   "name": "圆机械-鱼",
+   "name": "圆机械鱼",
    "description": "+15% 钓鱼经验"
   },
   "mech_shell_gold": {
@@ -3800,7 +3800,7 @@
    "description": "+60% 移动速度"
   },
   "abyssal_blob_brown": {
-   "name": "泥水滴",
+   "name": "泥团",
    "description": "+25% 半径"
   },
   "abyssal_fish_black": {
@@ -3808,7 +3808,7 @@
    "description": "+40% 收线速度"
   },
   "abyssal_fish_brown": {
-   "name": "深栖居者",
+   "name": "深栖者",
    "description": "+25% 爆米花"
   },
   "abyssal_fish_silver": {
@@ -3868,11 +3868,11 @@
    "description": "Who throws these away?"
   },
   "junk_apple": {
-   "name": "苹果核心",
+   "name": "苹果核",
    "description": "Bird snack leftovers."
   },
   "junk_net": {
-   "name": "破网",
+   "name": "破渔网",
    "description": "Useless for fishing."
   },
   "junk_seaweed": {
@@ -3880,7 +3880,7 @@
    "description": "Slimy."
   },
   "junk_pipe": {
-   "name": "锈管子",
+   "name": "锈水管",
    "description": "Part of an old plumbing system."
   },
   "junk_moss_clump": {
@@ -3996,7 +3996,7 @@
    "description": "+4% 鹦鹉攻击伤害"
   },
   "exp_f1_cloverbite_runner": {
-   "name": "三叶咬疾鱼",
+   "name": "三叶疾鱼",
    "description": "+4.5% 鹦鹉生命回复"
   },
   "exp_f1_emerald_glenperch": {
@@ -4004,7 +4004,7 @@
    "description": "+5% 鹦鹉最大生命"
   },
   "exp_f1_thistlejaw_hunter": {
-   "name": "蓟颚猎手",
+   "name": "刺颚猎手",
    "description": "+6% 鹦鹉技能点获取"
   },
   "exp_f1_bramblestripe_pikelet": {
@@ -4220,7 +4220,7 @@
    "description": "+50% 鹦鹉最大生命"
   },
   "exp_f4_fathom_oraclefish": {
-   "name": "噚神谕鱼",
+   "name": "深渊神谕鱼",
    "description": "+55% 鹦鹉技能点获取"
   },
   "exp_f4_ripjaw_ray": {
@@ -4252,7 +4252,7 @@
    "description": "+135% 鹦鹉攻击速度"
   },
   "exp_f4_mythic_mariana_phantom": {
-   "name": "神话马里亚纳幽灵",
+   "name": "马里亚纳幽灵",
    "description": "+160% 鹦鹉移动速度"
   },
   "exp_f6_frostpin_sprat": {
@@ -4284,7 +4284,7 @@
    "description": "+43% 鹦鹉攻击伤害"
   },
   "exp_f6_polar_flicker": {
-   "name": "极地闪烁",
+   "name": "极光闪鱼",
    "description": "+46% 鹦鹉生命回复"
   },
   "exp_f6_sleetcrest_perch": {
