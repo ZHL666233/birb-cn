@@ -1,0 +1,19 @@
+=== 'sleeping' ===
+hits: 1
+PandaChillTargetY']=_0x36f72e['y'],this['redPandaChillRetargetTimer']=0x4,this['setRedPandaAction'](_0x36f72e,'sleep'),this['dialogueManager']['showCinematicDialogue'](['Something\x20is\x20already\x20sleeping\x20inside\x20the\x20nest...','It\x20looks\x20like\x20it\x20has\x20been\x20guarding\x20the\x20grain\x20stores.','It\x20should\x20probably\x20have\x20a\x20name.'],()=>this['showRedPandaNamePrompt']()));}['showRedPandaNamePrompt'](){!function(_
+---
+
+=== 'Something is already' ===
+hits: 0
+
+=== 'inside the nest' ===
+hits: 0
+
+=== 'nest...' ===
+hits: 1
+['y'],this['redPandaChillRetargetTimer']=0x4,this['setRedPandaAction'](_0x36f72e,'sleep'),this['dialogueManager']['showCinematicDialogue'](['Something\x20is\x20already\x20sleeping\x20inside\x20the\x20nest...','It\x20looks\x20like\x20it\x20has\x20been\x20guarding\x20the\x20grain\x20stores.','It\x20should\x20probably\x20have\x20a\x20name.'],()=>this['showRedPandaNamePrompt']()));}['showRedPandaNamePrompt'](){!function(_0xbe9197){document['getElemen
+---
+
+=== 'already sleeping' ===
+hits: 0
+
