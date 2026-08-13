@@ -82,5 +82,32 @@ js = rep(js,
     "<button\\x20id=\\x22settings-game-chat-btn\\x22\\x20class=\\x22birb-btn\\x20primary\\x22\\x20style=\\x22display:none;\\x20width:100%;\\x20padding:12px;\\x20font-size:14px;\\x22>",
     1, 'P9 hide chat toggle button')
 
+# P10: translate hardcoded 'Parrot Aura' equipment name
+js = rep(js,
+    "'Parrot\\x20Aura'",
+    "Or('misc.spiritAuraName')",
+    1, 'P10 Parrot Aura name')
+
+# P11-P14: translate rarity quality names (rarity.toUpperCase -> Or('rarities.'+rarity))
+js = rep(js,
+    "_0x3dd76d['rarity']['toUpperCase']()",
+    "Or('rarities.'+_0x3dd76d['rarity'])['toUpperCase']()",
+    1, 'P11 gear upgrade rarity')
+
+js = rep(js,
+    "_0x483a45['rarity']['toUpperCase']()",
+    "Or('rarities.'+_0x483a45['rarity'])['toUpperCase']()",
+    1, 'P12 upgrade toast rarity')
+
+js = rep(js,
+    "_0x1c2278['targetRarity']['toUpperCase']()",
+    "Or('rarities.'+_0x1c2278['targetRarity'])['toUpperCase']()",
+    1, 'P13 fusion rarity')
+
+js = rep(js,
+    "_0x4b1632['nextRarity']['toUpperCase']()",
+    "Or('rarities.'+_0x4b1632['nextRarity'])['toUpperCase']()",
+    1, 'P14 slot evolve rarity')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
