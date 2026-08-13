@@ -7,7 +7,7 @@
 // @match        https://birbplay.com/*
 // @match        https://www.birbplay.com/*
 // @run-at       document-start
-// @grant        none
+// @grant        GM_addElement
 // @license      MIT
 // ==/UserScript==
 
@@ -69,10 +69,13 @@
       script.type = 'text/plain';
       var url = new URL(src, location.href).href;
       fetch(url).then(function (r) { return r.text(); }).then(function (code) {
-        var s = document.createElement('script');
-        s.type = 'module';
-        s.textContent = patch(code);
-        script.parentNode.replaceChild(s, script);
+        var parent = script.parentNode;
+        script.remove();
+        // 用 GM_addElement 绕过页面 CSP（birbplay.com 的 script-src 'self' 会阻止普通内联 script）
+        GM_addElement(parent, 'script', {
+          type: 'module',
+          textContent: patch(code)
+        });
       }).catch(function () {
         // 失败则恢复原脚本，保证游戏仍能运行
         script.type = 'module';
