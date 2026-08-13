@@ -167,5 +167,23 @@ js = rep(js,
     ">'+Or('misc.infuseAction')+'\\x20+",
     2, 'P24 infusion label')
 
+# P25: xr() must keep zh translations for artifact/equipment names (fill missing only)
+js = rep(js,
+    "_0x384eeb[_0x5ab7d1]=_0x287051",
+    "_0x384eeb[_0x5ab7d1]=_0x384eeb[_0x5ab7d1]||_0x287051",
+    1, 'P25 xr name override -> fill missing')
+
+# P26a: VM tooltip stat label for maxHealth/hpMult
+js = rep(js,
+    "'damageMult'!==_0x479f40&&'damage'!==_0x479f40||(_0x52bb37=IM('misc.statDamageShort')),'maxHealthAdd'",
+    "'damageMult'!==_0x479f40&&'damage'!==_0x479f40||(_0x52bb37=IM('misc.statDamageShort')),'hpMult'!==_0x479f40&&'maxHealth'!==_0x479f40||(_0x52bb37=IM('misc.healthPercentLabel')),'maxHealthAdd'",
+    1, 'P26a VM maxHealth/hpMult label')
+
+# P26b: VM tooltip stat label for attackSpeed/moveSpeed/critChance
+js = rep(js,
+    "'lifeRegenMult'===_0x479f40&&(_0x52bb37=IM('misc.statHpRegen'));",
+    "'lifeRegenMult'===_0x479f40&&(_0x52bb37=IM('misc.statHpRegen')),'attackSpeedMult'!==_0x479f40&&'attackSpeed'!==_0x479f40||(_0x52bb37=IM('misc.attackSpeedLabel')),'moveSpeedMult'!==_0x479f40&&'moveSpeed'!==_0x479f40||(_0x52bb37=IM('misc.moveSpeedLabel')),'critChance'===_0x479f40&&(_0x52bb37=IM('misc.critChanceLabel'));",
+    1, 'P26b VM attackSpeed/moveSpeed/critChance label')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
