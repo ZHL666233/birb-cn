@@ -109,5 +109,63 @@ js = rep(js,
     "Or('rarities.'+_0x4b1632['nextRarity'])['toUpperCase']()",
     1, 'P14 slot evolve rarity')
 
+# P15/P16: monster overhead progress text (castle monster)
+js = rep(js,
+    "'SATISFACTION:\\x20'",
+    "'满意度：'",
+    1, 'P15 monster satisfaction')
+
+js = rep(js,
+    "'COMPLETED!'",
+    "'完成！'",
+    1, 'P16 monster completed')
+
+# P17/P18: hardcoded aura display names in gy()
+js = rep(js,
+    "?'Spirit\\x20Aura':'rare\\x20spirit\\x20trash'===",
+    "?'灵魂光环':'rare\\x20spirit\\x20trash'===",
+    1, 'P17 spirit aura name')
+
+js = rep(js,
+    "?'Rare\\x20Spirit\\x20Aura':",
+    "?'稀有灵魂光环':",
+    1, 'P18 rare spirit aura name')
+
+# P19: getAuraRarityLabel rarity capitalization -> translate
+js = rep(js,
+    "_0x5746ce['charAt'](0x0)['toUpperCase']()+_0x5746ce['slice'](0x1)",
+    "Or('rarities.'+_0x5746ce)",
+    1, 'P19 aura rarity label')
+
+# P20: hotbar equipment slot title rarity (was showing e.g. "COMMON")
+js = rep(js,
+    "_0x5f5cfd['toUpperCase']()",
+    "Or('rarities.'+_0x5f5cfd)['toUpperCase']()",
+    1, 'P20 hotbar gear rarity')
+
+# P21: fusion target rarity label
+js = rep(js,
+    "_0x4b5db8['targetRarity']['toUpperCase']()",
+    "Or('rarities.'+_0x4b5db8['targetRarity'])['toUpperCase']()",
+    1, 'P21 fusion target rarity')
+
+# P22: loot aura float text "+N RARITY AURA"
+js = rep(js,
+    "_0x5a062b['toUpperCase']()+'\\x20AURA'",
+    "Or('rarities.'+_0x5a062b)['toUpperCase']()+Or('misc.auraWordPlural')",
+    1, 'P22 loot aura float text')
+
+# P23: equipment chest float text "+N RARITY EQUIP CHEST"
+js = rep(js,
+    "_0x4f439f['toUpperCase']()+'\\x20EQUIP\\x20CHEST'",
+    "Or('rarities.'+_0x4f439f)['toUpperCase']()+Or('fishing.equipment')+Or('ui.chest')",
+    1, 'P23 equip chest float text')
+
+# P24: artifact "INFUSION +N" label (tooltip + gear detail)
+js = rep(js,
+    ">INFUSION\\x20+",
+    ">'+Or('misc.infuseAction')+'\\x20+",
+    2, 'P24 infusion label')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
