@@ -5927,7 +5927,10 @@
   "adminUpdated": "已更新",
   "adminVisibleOnly": "仅可见",
   "adminWsFailed": "管理 websocket 失败",
-  "adminWsTimeout": "管理 websocket 超时"
+  "adminWsTimeout": "管理 websocket 超时",
+  "twigs": "树枝",
+  "equipment": "装备",
+  "languageChinese": "中文"
  },
  "mapEditor": {
   "assetPicker": "资源选择器",
@@ -6194,5 +6197,8 @@
   "communityGoalTipAria": "了解社区目标如何运作",
   "communityGoalLastWon": "上周：目标达成！",
   "communityGoalLastMissed": "上周：目标未达成。继续钓鱼！"
+ },
+ "parrot": {
+  "title": "鹦鹉"
  }
 }
