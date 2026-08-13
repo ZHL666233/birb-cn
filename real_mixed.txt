@@ -1,0 +1,15 @@
+[misc] invalidChatCommand :: 无效命令。使用 /w [名字] [消息]、/report [名字]   <英文:report>
+[misc] hatProgressReleaseDay :: 发布日：{date}（UTC）   <英文:UTC>
+[misc] aquariumBestWeightKg :: 最佳 {weight}kg   <英文:kg>
+[misc] aquariumShinyChanceWeightFloat :: +{value} 闪光几率 | {weight}kg   <英文:kg>
+[mapEditor] applyBitmaskJson :: 应用位掩码 JSON   <英文:JSON>
+[mapEditor] loadMapId :: 加载地图 ID   <英文:ID>
+[mapEditor] assetSliceHelper :: 使用 AS 窗口从预览中切割/选择。   <英文:AS>
+[mapEditor] pathAutoTileHint :: JSON 接受 domains.path/path 或 id->rect（{count} 个规范 id）。路径画笔用画笔缩放作为瓦片大小。   <英文:JSON,domains,path,path,id,rect,id>
+[mapEditor] bitmaskJsonEmpty :: 位掩码 JSON 为空。   <英文:JSON>
+[mapEditor] loadedBitmaskEntitiesMissing :: 加载 {count}/{total} 个位掩码实体。缺失的 ID 回退到规范瓦片 0。   <英文:ID>
+[mapEditor] invalidJson :: 无效 JSON：{message}   <英文:JSON>
+[mapEditor] mapIdToLoad :: 要加载的地图 ID   <英文:ID>
+[mapEditor] mapId :: 地图 ID   <英文:ID>
+
+总计: 13

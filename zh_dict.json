@@ -2720,7 +2720,7 @@
    "description": "+15% 种子"
   },
   "fish_tan_red_fins": {
-   "name": "红 Fin 鱼",
+   "name": "红鳍鱼",
    "description": "+6% 羽毛"
   },
   "perch_tan": {
@@ -2936,7 +2936,7 @@
    "description": "+80% 种子"
   },
   "ghost_angel_purple": {
-   "name": "紫灵魂 Angel",
+   "name": "紫灵魂天使",
    "description": "+80% 钓鱼经验"
   },
   "ghost_blob_pink": {
@@ -2956,7 +2956,7 @@
    "description": "+110% 羽毛"
   },
   "ghost_skeleton_green": {
-   "name": "Mossy 骷髅",
+   "name": "苔藓骷髅",
    "description": "+70% 收线速度"
   },
   "ghost_wisp_green": {
@@ -2964,7 +2964,7 @@
    "description": "+35% 移动速度"
   },
   "ocean_blue_pale": {
-   "name": "浅 Ocean 鱼",
+   "name": "浅海鱼",
    "description": "+6% 移动速度"
   },
   "ocean_navy": {
@@ -2992,7 +2992,7 @@
    "description": "+40% 爆米花"
   },
   "ocean_whale_maroon": {
-   "name": "Maroon 鲸",
+   "name": "栗色鲸",
    "description": "+40% 钓鱼经验"
   },
   "ocean_whale_purple": {
@@ -3028,7 +3028,7 @@
    "description": "+20% 移动速度"
   },
   "eel_garden": {
-   "name": "Garden 鳗鱼",
+   "name": "花园鳗",
    "description": "+18% 半径"
   },
   "energized_fish": {
@@ -3192,11 +3192,11 @@
    "description": "+20% 半径"
   },
   "gulper_eel": {
-   "name": "Gulper 鳗鱼",
+   "name": "吞噬鳗",
    "description": "+45% 爆米花"
   },
   "sea_angel": {
-   "name": "深渊 Angel",
+   "name": "深渊天使",
    "description": "+150% 钓鱼经验"
   },
   "viper_silver": {
@@ -3260,7 +3260,7 @@
    "description": "+18% 爆米花"
   },
   "fish_white_fresh": {
-   "name": "Freshwater 白鱼",
+   "name": "淡水白鱼",
    "description": "+15% 羽毛"
   },
   "bass_crimson": {
@@ -3292,7 +3292,7 @@
    "description": "+45% 爆米花"
   },
   "goldfish_black_moor": {
-   "name": "黑 Moor 金鱼",
+   "name": "黑龙睛金鱼",
    "description": "+20% 钓鱼经验"
   },
   "goldfish_calico": {
@@ -3312,7 +3312,7 @@
    "description": "+15% 钓鱼经验"
   },
   "rockfish_spiky_red": {
-   "name": "Spiky 红岩鱼",
+   "name": "多刺红岩鱼",
    "description": "+40% 羽毛"
   },
   "snapper_orange_river": {
@@ -3348,27 +3348,27 @@
    "description": "+25% 钓鱼经验"
   },
   "ocean_blue_dark": {
-   "name": "深 Sea 泳者",
+   "name": "深海泳者",
    "description": "+18% 爆米花"
   },
   "ocean_blue_green": {
-   "name": "青绿 Ocean 鱼",
+   "name": "青绿海鱼",
    "description": "+35% 钓鱼经验"
   },
   "ocean_blue_longfin": {
-   "name": "Longfin 蓝鱼",
+   "name": "长鳍蓝鱼",
    "description": "+35% 钓鱼经验"
   },
   "ocean_blue_tiny": {
-   "name": "迷你蓝 Ocean 鱼",
+   "name": "迷你蓝海鱼",
    "description": "+5% 种子"
   },
   "ocean_grey_blue": {
-   "name": "风暴 Ocean 鱼",
+   "name": "风暴海鱼",
    "description": "+8% 半径"
   },
   "ocean_lavender_round": {
-   "name": "圆薰衣草 Ocean 鱼",
+   "name": "圆薰衣草海鱼",
    "description": "+22% 羽毛"
   },
   "ocean_purple_green": {
@@ -3376,19 +3376,19 @@
    "description": "+40% 羽毛"
   },
   "ocean_purple_tiny": {
-   "name": "迷你紫 Ocean 鱼",
+   "name": "迷你紫海鱼",
    "description": "+8% 收线速度"
   },
   "ocean_purple_white": {
-   "name": "紫-白 Ocean 鱼",
+   "name": "紫白海鱼",
    "description": "+30% 钓鱼经验"
   },
   "ocean_red_blue": {
-   "name": "双色 Ocean 泳者",
+   "name": "双色海泳者",
    "description": "+25% 种子"
   },
   "ocean_white_blue": {
-   "name": "白-蓝 Ocean 鱼",
+   "name": "白蓝海鱼",
    "description": "+20% 爆米花"
   },
   "ocean_white_pale": {
@@ -3396,7 +3396,7 @@
    "description": "+10% 收线速度"
   },
   "whale_blue_green_ocean": {
-   "name": "Greenish 蓝鲸",
+   "name": "泛绿蓝鲸",
    "description": "+200% 爆米花"
   },
   "whale_blue_small_ocean": {
@@ -3412,7 +3412,7 @@
    "description": "+100% 羽毛"
   },
   "dead_fish": {
-   "name": "Dead 鱼",
+   "name": "死鱼",
    "description": "-50% 爆米花"
   },
   "gray_puffer_fish": {
@@ -3420,7 +3420,7 @@
    "description": "+20% 半径"
   },
   "hermit_crab_small": {
-   "name": "小 Hermit 蟹",
+   "name": "小寄居蟹",
    "description": "+15% 收线速度"
   },
   "normal_moonfish": {
@@ -3440,7 +3440,7 @@
    "description": "+20% 羽毛"
   },
   "runic_moonfish": {
-   "name": "Runic 月亮鱼",
+   "name": "符文月亮鱼",
    "description": "+50% 种子"
   },
   "small_crab_creature": {
@@ -3468,7 +3468,7 @@
    "description": "+15% 种子"
   },
   "damselfish_blue_tail": {
-   "name": "蓝 Tail 雀鲷",
+   "name": "蓝尾雀鲷",
    "description": "+12% 收线速度"
   },
   "discus_orange": {
@@ -3512,7 +3512,7 @@
    "description": "+30% 半径"
   },
   "ghost_angel_white": {
-   "name": "Pure 灵魂 Angel",
+   "name": "纯净灵魂天使",
    "description": "+85% 钓鱼经验"
   },
   "ghost_blob_blue": {
@@ -3548,11 +3548,11 @@
    "description": "+50% 爆米花"
   },
   "ghost_fish_tan": {
-   "name": "Sandy 灵魂",
+   "name": "沙灵",
    "description": "+35% 种子"
   },
   "ghost_fish_yellow_small": {
-   "name": "迷你 Sparks 灵魂",
+   "name": "迷你火花灵",
    "description": "+20% 钓鱼经验"
   },
   "ghost_orb_white": {
@@ -3564,7 +3564,7 @@
    "description": "+85% 羽毛"
   },
   "ghost_skeleton_green_long": {
-   "name": "Mossy 巨蛇",
+   "name": "苔藓巨蛇",
    "description": "+50% 收线速度"
   },
   "ghost_skeleton_purple": {
@@ -3588,7 +3588,7 @@
    "description": "+5% 种子"
   },
   "cosmic_fish_green": {
-   "name": "星-Spangled 鱼",
+   "name": "星斑鱼",
    "description": "+15% 收线速度"
   },
   "cosmic_fish_pink": {
@@ -3648,7 +3648,7 @@
    "description": "A large, rusty bolt."
   },
   "clock_compass": {
-   "name": "Navigator 钟",
+   "name": "航海钟",
    "description": "+40% 钓鱼经验"
   },
   "depth_charge": {
@@ -3672,7 +3672,7 @@
    "description": "+15% 钓鱼经验"
   },
   "mech_shell_gold": {
-   "name": "Gilded 机甲鱼",
+   "name": "镀金机甲鱼",
    "description": "+50% 羽毛"
   },
   "mech_shell_iron": {
@@ -3688,7 +3688,7 @@
    "description": "+22% 钓鱼经验"
   },
   "sea_watch": {
-   "name": "Submariner 表",
+   "name": "潜水员表",
    "description": "+60% 羽毛"
   },
   "spider_drone": {
@@ -3700,7 +3700,7 @@
    "description": "+45% 半径"
   },
   "torpedo_mini": {
-   "name": "迷你-Torpedo",
+   "name": "迷你鱼雷",
    "description": "+42% 爆米花"
   },
   "crab_green": {
@@ -3708,7 +3708,7 @@
    "description": "+15% 半径"
   },
   "crab_hermit_standard": {
-   "name": "Hermit 蟹",
+   "name": "寄居蟹",
    "description": "+25% 收线速度"
   },
   "crab_orange": {
@@ -3724,7 +3724,7 @@
    "description": "+35% 收线速度"
   },
   "crab_red": {
-   "name": "红 Salt 蟹",
+   "name": "红盐蟹",
    "description": "+15% 爆米花"
   },
   "crab_white": {
@@ -3736,11 +3736,11 @@
    "description": "+35% 种子"
   },
   "crayfish_brown": {
-   "name": "河 Crayfish",
+   "name": "河螯虾",
    "description": "+20% 种子"
   },
   "crayfish_red": {
-   "name": "信号 Crayfish",
+   "name": "信号螯虾",
    "description": "+22% 收线速度"
   },
   "lobster_white": {
@@ -3748,7 +3748,7 @@
    "description": "+85% 羽毛"
   },
   "plankton_cloud": {
-   "name": "浮游 Cloud",
+   "name": "浮游云",
    "description": "+3% 钓鱼经验"
   },
   "shrimp_pink_reef": {
@@ -3756,15 +3756,15 @@
    "description": "+5% 爆米花"
   },
   "fish_tan_fresh": {
-   "name": "棕黄 Freshwater 鱼",
+   "name": "棕黄淡水鱼",
    "description": "+6% 爆米花"
   },
   "ocean_blue_navy": {
-   "name": "藏青 Ocean 鱼",
+   "name": "藏青海鱼",
    "description": "+7% 收线速度"
   },
   "ocean_grey_blue_alt": {
-   "name": "风暴 Ocean 鱼",
+   "name": "风暴海鱼",
    "description": "+8% 半径"
   },
   "gear_large": {
@@ -3772,7 +3772,7 @@
    "description": "+28% 半径"
   },
   "pipe_joint": {
-   "name": "铜管子 Joint",
+   "name": "铜管接头",
    "description": "+15% 爆米花"
   },
   "mech_shell_gold_real": {
@@ -3800,7 +3800,7 @@
    "description": "+60% 移动速度"
   },
   "abyssal_blob_brown": {
-   "name": "Mud 水滴",
+   "name": "泥水滴",
    "description": "+25% 半径"
   },
   "abyssal_fish_black": {
@@ -3820,11 +3820,11 @@
    "description": "+45% 种子"
   },
   "abyssal_spine_dark": {
-   "name": "Spine 鱼",
+   "name": "棘鱼",
    "description": "+45% 羽毛"
   },
   "abyssal_worm_dark": {
-   "name": "Shadow 蠕虫",
+   "name": "影蠕虫",
    "description": "+70% 半径"
   },
   "angler_silver": {
@@ -3832,15 +3832,15 @@
    "description": "+50% 收线速度"
   },
   "bobbit_worm": {
-   "name": "Bobbit 蠕虫",
+   "name": "博比特虫",
    "description": "+80% 种子"
   },
   "dragonfish_black": {
-   "name": "黑 Dragon",
+   "name": "黑龙",
    "description": "+110% 钓鱼经验"
   },
   "lanternfish_blue": {
-   "name": "Lantern 鱼",
+   "name": "灯笼鱼",
    "description": "+40% 爆米花"
   },
   "prawn_purple": {
@@ -3848,7 +3848,7 @@
    "description": "+30% 羽毛"
   },
   "prawn_red": {
-   "name": "Magma 虾",
+   "name": "岩浆虾",
    "description": "+30% 收线速度"
   },
   "sea_slug_yellow": {
@@ -3860,11 +3860,11 @@
    "description": "+10% 种子"
   },
   "tube_worm_red": {
-   "name": "巨 Tube 蠕虫",
+   "name": "巨管虫",
    "description": "+75% 爆米花"
   },
   "junk_boot": {
-   "name": "Old 靴子",
+   "name": "旧靴子",
    "description": "Who throws these away?"
   },
   "junk_apple": {
@@ -3872,11 +3872,11 @@
    "description": "Bird snack leftovers."
   },
   "junk_net": {
-   "name": "Torn 网",
+   "name": "破网",
    "description": "Useless for fishing."
   },
   "junk_seaweed": {
-   "name": "Soggy 海藻",
+   "name": "湿海藻",
    "description": "Slimy."
   },
   "junk_pipe": {
@@ -3884,35 +3884,35 @@
    "description": "Part of an old plumbing system."
   },
   "junk_moss_clump": {
-   "name": "苔 Clump",
+   "name": "苔藓团",
    "description": "Just a ball of moss."
   },
   "junk_stone_grey": {
-   "name": "Smooth 石头",
+   "name": "光滑石头",
    "description": "Just a pretty rock."
   },
   "junk_sea_ribbons": {
-   "name": "Sea 丝带",
+   "name": "海丝带",
    "description": "Beautiful but useless."
   },
   "junk_sea_vine": {
-   "name": "Sea 藤蔓",
+   "name": "海藤蔓",
    "description": "Tough underwater plant."
   },
   "junk_bottle_jar": {
-   "name": "Empty 罐子",
+   "name": "空罐子",
    "description": "Used to hold pickles, maybe."
   },
   "junk_bottle_potion": {
-   "name": "Empty Potion 瓶子",
+   "name": "空药水瓶",
    "description": "Smells like magic."
   },
   "junk_boots_pair": {
-   "name": "Pair of 靴子",
+   "name": "一双靴子",
    "description": "At least it's a set."
   },
   "junk_spectacles": {
-   "name": "Old 眼镜",
+   "name": "旧眼镜",
    "description": "Someone lost their sight."
   },
   "junk_stone_fragment": {
@@ -3924,11 +3924,11 @@
    "description": "Listen to the ocean."
   },
   "treasure_chest_wood": {
-   "name": "Wooden 宝箱",
+   "name": "木宝箱",
    "description": "Might have something inside... wait, it's empty."
   },
   "treasure_chest_mossy": {
-   "name": "Mossy 宝箱",
+   "name": "苔藓宝箱",
    "description": "Been underwater for a while."
   },
   "treasure_chest_iron": {
@@ -3960,7 +3960,7 @@
    "description": "Heavy and locked."
   },
   "treasure_crown": {
-   "name": "Lost 王冠",
+   "name": "失落王冠",
    "description": "Fit for a king of the sea."
   },
   "treasure_chest_royal": {
@@ -3988,7 +3988,7 @@
    "description": "+3% 鹦鹉攻击速度"
   },
   "exp_f1_dewscale_sproutfish": {
-   "name": "露鳞 Sproutfish",
+   "name": "露鳞芽鱼",
    "description": "+3.5% 鹦鹉移动速度"
   },
   "exp_f1_barkback_koi": {
@@ -4000,7 +4000,7 @@
    "description": "+4.5% 鹦鹉生命回复"
   },
   "exp_f1_emerald_glenperch": {
-   "name": "翡翠 Glenperch",
+   "name": "翡翠幽谷鲈",
    "description": "+5% 鹦鹉最大生命"
   },
   "exp_f1_thistlejaw_hunter": {
@@ -4036,7 +4036,7 @@
    "description": "+16% 鹦鹉攻击速度"
   },
   "exp_f1_whisperleaf_piran": {
-   "name": "低语叶 Piran",
+   "name": "低语叶食人鱼",
    "description": "+18% 鹦鹉移动速度"
   },
   "exp_f1_faebloom_serpent": {
@@ -4068,11 +4068,11 @@
    "description": "+10% 鹦鹉攻击伤害"
   },
   "exp_f2_violet_hexfin": {
-   "name": "紫罗兰 Hexfin",
+   "name": "紫罗兰咒鳍",
    "description": "+11% 鹦鹉生命回复"
   },
   "exp_f2_lilac_runelet": {
-   "name": "丁香 Runelet",
+   "name": "丁香小符文",
    "description": "+12% 鹦鹉最大生命"
   },
   "exp_f2_gloamwhorl_fry": {
@@ -4084,7 +4084,7 @@
    "description": "+15% 鹦鹉攻击速度"
   },
   "exp_f2_amethyst_driftling": {
-   "name": "紫晶 Driftling",
+   "name": "紫晶漂灵",
    "description": "+16% 鹦鹉移动速度"
   },
   "exp_f2_nightbloom_koi": {
@@ -4196,7 +4196,7 @@
    "description": "+34% 鹦鹉最大生命"
   },
   "exp_f4_riptide_hexfin": {
-   "name": "激流 Hexfin",
+   "name": "激流咒鳍",
    "description": "+36% 鹦鹉技能点获取"
   },
   "exp_f4_stormveil_shiner": {
@@ -4284,7 +4284,7 @@
    "description": "+43% 鹦鹉攻击伤害"
   },
   "exp_f6_polar_flicker": {
-   "name": "极地 Flicker",
+   "name": "极地闪烁",
    "description": "+46% 鹦鹉生命回复"
   },
   "exp_f6_sleetcrest_perch": {
