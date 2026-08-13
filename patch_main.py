@@ -185,5 +185,11 @@ js = rep(js,
     "'lifeRegenMult'===_0x479f40&&(_0x52bb37=IM('misc.statHpRegen')),'attackSpeedMult'!==_0x479f40&&'attackSpeed'!==_0x479f40||(_0x52bb37=IM('misc.attackSpeedLabel')),'moveSpeedMult'!==_0x479f40&&'moveSpeed'!==_0x479f40||(_0x52bb37=IM('misc.moveSpeedLabel')),'critChance'===_0x479f40&&(_0x52bb37=IM('misc.critChanceLabel'));",
     1, 'P26b VM attackSpeed/moveSpeed/critChance label')
 
+# P27: hotbar equipment slot title uses translated name (AM) instead of raw English name
+js = rep(js,
+    "_0x20d0ff=_0x473036?.['name']||_0x26f0db?.['name']||_0x3c0a76",
+    "_0x20d0ff=_0x473036?.['name']||(_0x3b825d?AM(_0x3b825d):_0x3c0a76)",
+    1, 'P27 hotbar equipment name')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
