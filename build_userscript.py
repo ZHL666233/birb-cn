@@ -37,14 +37,14 @@ rules = [
     (r"_0x4b1632['nextRarity']['toUpperCase']()", "Or('rarities.'+_0x4b1632['nextRarity'])['toUpperCase']()"),
     (r"'SATISFACTION:\x20'", "'满意度：'"),
     (r"'COMPLETED!'", "'完成！'"),
-    (r"?'Spirit\x20Aura':'rare\x20spirit\x20trash'===", "?'灵魂光环':'rare\x20spirit\x20trash'==="),
+    (r"?'Spirit\x20Aura':'rare\x20spirit\x20trash'===", r"?'灵魂光环':'rare\x20spirit\x20trash'==="),
     (r"?'Rare\x20Spirit\x20Aura':", "?'稀有灵魂光环':"),
     (r"_0x5746ce['charAt'](0x0)['toUpperCase']()+_0x5746ce['slice'](0x1)", "Or('rarities.'+_0x5746ce)"),
     (r"_0x5f5cfd['toUpperCase']()", "Or('rarities.'+_0x5f5cfd)['toUpperCase']()"),
     (r"_0x4b5db8['targetRarity']['toUpperCase']()", "Or('rarities.'+_0x4b5db8['targetRarity'])['toUpperCase']()"),
     (r"_0x5a062b['toUpperCase']()+'\x20AURA'", "Or('rarities.'+_0x5a062b)['toUpperCase']()+Or('misc.auraWordPlural')"),
     (r"_0x4f439f['toUpperCase']()+'\x20EQUIP\x20CHEST'", "Or('rarities.'+_0x4f439f)['toUpperCase']()+Or('fishing.equipment')+Or('ui.chest')"),
-    (r">INFUSION\x20+", ">'+Or('misc.infuseAction')+'\x20+"),
+    (r">INFUSION\x20+", r">'+Or('misc.infuseAction')+'\x20+"),
     (r"_0x384eeb[_0x5ab7d1]=_0x287051", "_0x384eeb[_0x5ab7d1]=_0x384eeb[_0x5ab7d1]||_0x287051"),
     (r"'damageMult'!==_0x479f40&&'damage'!==_0x479f40||(_0x52bb37=IM('misc.statDamageShort')),'maxHealthAdd'",
      r"'damageMult'!==_0x479f40&&'damage'!==_0x479f40||(_0x52bb37=IM('misc.statDamageShort')),'hpMult'!==_0x479f40&&'maxHealth'!==_0x479f40||(_0x52bb37=IM('misc.healthPercentLabel')),'maxHealthAdd'"),
@@ -133,7 +133,7 @@ __REPL_BLOCK__
 })();
 '''
 
-script = script.replace('__BASE__', json.dumps(BASE))
+script = script.replace('__BASE__', BASE)
 script = script.replace('__ZH_DICT_SOURCE__', json.dumps(zh_source, ensure_ascii=False))
 script = script.replace('__REPL_BLOCK__', repl_block)
 
