@@ -713,7 +713,7 @@
   "type_boost": "类型加成",
   "exclusive_type": "仅捕获",
   "shiny_type_boost": "闪光加成",
-  "rod_fish_mult": "鱼竿鱼",
+  "rod_fish_mult": "鱼竿所需鱼",
   "fishing_xp_mult": "钓鱼经验",
   "xp_mult": "钓鱼经验",
   "popcorn_mult": "爆米花",
@@ -1067,11 +1067,11 @@
   },
   "lure_basic": {
    "name": "基础诱饵",
-   "description": "帮助寻找鱼竿鱼。"
+   "description": "帮助寻找鱼竿所需鱼。"
   },
   "lure_advanced": {
    "name": "高级诱饵",
-   "description": "对鱼竿鱼有强吸引力。"
+   "description": "对鱼竿所需鱼有强吸引力。"
   },
   "lure_pro": {
    "name": "专业诱饵",
@@ -1079,7 +1079,7 @@
   },
   "lure_master": {
    "name": "大师诱饵",
-   "description": "鱼竿鱼无法抗拒。"
+   "description": "鱼竿所需鱼无法抗拒。"
   },
   "lure_legend": {
    "name": "传说诱饵",
@@ -2303,7 +2303,7 @@
   },
   "d_rod_chance": {
    "name": "精准抛竿",
-   "description": "+15% 鱼竿鱼几率"
+   "description": "+15% 鱼竿所需鱼几率"
   },
   "d_critical_reel": {
    "name": "暴击抛竿",
