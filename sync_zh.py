@@ -116,6 +116,10 @@ def main():
     json.dump(zh, open(DICT, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     json.dump(zt, open(CACHE, 'w', encoding='utf-8'), ensure_ascii=False)
 
+    # 同步后重新生成 zh-CHINESE.js（patch_main.py 依赖的语言文件）
+    zh_chunk = 'const e=' + json.dumps(zh, ensure_ascii=False, separators=(',', ':')) + ';export{e as zh};'
+    open('zh-CHINESE.js', 'w', encoding='utf-8', newline='\n').write(zh_chunk)
+
     # 报告
     lines = []
     lines.append('== 汉化词典同步报告 ==')
