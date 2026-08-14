@@ -30,6 +30,21 @@
             } catch (e) { }
         })();
     </script>
+    <script>
+        // 保护：localStorage 配额满/被禁用时，读写静默失败，避免游戏启动崩溃
+        (function () {
+            try {
+                var sp = Storage.prototype;
+                ['getItem', 'setItem', 'removeItem'].forEach(function (name) {
+                    var orig = sp[name];
+                    sp[name] = function () {
+                        try { return orig.apply(this, arguments); }
+                        catch (e) { return name === 'getItem' ? null : undefined; }
+                    };
+                });
+            } catch (e) { }
+        })();
+    </script>
     <script src="./itch-frame-ready.js"></script>
   <script type="module" crossorigin src="./assets/main-7_LUcYxX.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-DdH9JgaZ.js">
