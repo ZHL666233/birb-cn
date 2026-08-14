@@ -194,7 +194,7 @@ js = rep(js,
 # P28: third seagull (specialist) name was hardcoded 'SPECIALIST'
 js = rep(js,
     "?'SPECIALIST':Or('misc.seagullN')",
-    "?Or('misc.specialist'):Or('misc.seagullN')",
+    "?'专家海鸥':Or('misc.seagullN')",
     1, 'P28 specialist seagull name')
 
 # P29: shiny-fish tracker seagull labels were hardcoded 'Gull N'
