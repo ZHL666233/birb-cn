@@ -191,5 +191,17 @@ js = rep(js,
     "_0x20d0ff=_0x473036?.['name']||(_0x3b825d?AM(_0x3b825d):_0x3c0a76)",
     1, 'P27 hotbar equipment name')
 
+# P28: third seagull (specialist) name was hardcoded 'SPECIALIST'
+js = rep(js,
+    "?'SPECIALIST':Or('misc.seagullN')",
+    "?Or('misc.specialist'):Or('misc.seagullN')",
+    1, 'P28 specialist seagull name')
+
+# P29: shiny-fish tracker seagull labels were hardcoded 'Gull N'
+js = rep(js,
+    "VU('Gull\\x20'+(_0x3507c1+0x1),_0x253b95,",
+    "VU(Or('misc.seagullN')['replace']('{n}',String(_0x3507c1+0x1)),_0x253b95,",
+    1, 'P29 shiny tracker seagull label')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
