@@ -203,5 +203,21 @@ js = rep(js,
     "VU(Or('misc.seagullN')['replace']('{n}',String(_0x3507c1+0x1)),_0x253b95,",
     1, 'P29 shiny tracker seagull label')
 
+# P30: mobile tap -> synthesize mousedown (fix touch tapping/clicking, e.g. feeding monster)
+js = rep(js,
+    "['joystick']={'active':!0x1,'x':0x0,'y':0x0,'startX':0x0,'startY':0x0};",
+    "['joystick']={'active':!0x1,'x':0x0,'y':0x0,'startX':0x0,'startY':0x0,'startClientX':0x0,'startClientY':0x0,'startTime':0x0};",
+    1, 'P30a joystick tap fields')
+
+js = rep(js,
+    "this['joystick']['startX']=_0x541a5f['clientX']-_0x36cdf1['left'],this['joystick']['startY']=_0x541a5f['clientY']-_0x36cdf1['top'],this['joystick']['x']=0x0,this['joystick']['y']=0x0,_0x421194['preventDefault']();",
+    "this['joystick']['startX']=_0x541a5f['clientX']-_0x36cdf1['left'],this['joystick']['startY']=_0x541a5f['clientY']-_0x36cdf1['top'],this['joystick']['startClientX']=_0x541a5f['clientX'],this['joystick']['startClientY']=_0x541a5f['clientY'],this['joystick']['startTime']=Date['now'](),this['joystick']['x']=0x0,this['joystick']['y']=0x0,_0x421194['preventDefault']();",
+    1, 'P30b touchstart tap record')
+
+js = rep(js,
+    "['handleTouchEnd']=()=>{this['joystick']['active']=!0x1,this['joystick']['x']=0x0,this['joystick']['y']=0x0;};",
+    "['handleTouchEnd']=()=>{const _0x7a9b1=Math['hypot'](this['joystick']['x'],this['joystick']['y']),_0x8b2c3=Date['now']()-this['joystick']['startTime'];this['joystick']['active']=!0x1,this['joystick']['x']=0x0,this['joystick']['y']=0x0;if(_0x7a9b1<0xf&&_0x8b2c3<0x258){const _0x9c4d5={'clientX':this['joystick']['startClientX'],'clientY':this['joystick']['startClientY'],'button':0x0,'bubbles':!0x0,'cancelable':!0x0,'view':window};this['canvas']['dispatchEvent'](new MouseEvent('mousedown',_0x9c4d5)),this['canvas']['dispatchEvent'](new MouseEvent('mouseup',_0x9c4d5));}};",
+    1, 'P30c touchend tap dispatch')
+
 open('patched_main.js', 'w', encoding='utf-8').write(js)
 print('patched_main.js written, size:', len(js))
